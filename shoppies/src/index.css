@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: 'Limelight', cursive;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  display: grid;
+  place-items: center;
+}
+
+.movieSuggestions {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  place-items: center;
+}
+
+.spot {
+  display: grid;
+  place-items: center;
+}
+
+.searchIcon {
+  height: 200px;
+}
+
+.searchIcon:hover {
+  height: 270px;
+}
+
+img {
+  border-width: 2px;
+  border: solid;
+  border-color: white;
+}
