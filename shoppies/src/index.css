@@ -16,7 +16,7 @@ body {
 
 .movieSuggestions {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   place-items: center;
 }
 
@@ -27,6 +27,8 @@ body {
 
 .searchIcon {
   height: 200px;
+  cursor: pointer;
+  transition-duration: .25s;
 }
 
 .searchIcon:hover {
@@ -34,7 +36,30 @@ body {
 }
 
 img {
+  margin-top: 15px;
   border-width: 2px;
   border: solid;
   border-color: white;
+}
+
+h4 {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+.form-control {
+  margin: 20px 0;
+  display: grid;
+  place-items: center;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
 }
