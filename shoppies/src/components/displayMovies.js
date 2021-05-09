@@ -1,14 +1,13 @@
 import Button from './Button';
 
-const DisplayMovie = ( {src, title, year} ) => {
+const DisplayMovie = ( {onClick, src, alt, value} ) => {
 
 
     return (
         <div className = "container">        
-            <img src={src} alt={title} />
-            <h2>{title}</h2>
-            <h3>({year})</h3>
-            <Button />
+            <img onClick={onClick} src={src} alt={alt}/>
+            <h2>{alt}</h2>
+            <h3>({value})</h3>
       </div>
     )
 }

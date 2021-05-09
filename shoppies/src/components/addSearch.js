@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import {FaSearch} from 'react-icons/fa';
 
-const Search = ({onAdd}) => {
+const Search = ({onSearch}) => {
     const [text, setText] = useState('')
 
     const onSubmit = (e) => {
@@ -11,9 +12,11 @@ const Search = ({onAdd}) => {
             return
         }
 
-        onAdd({text})
+        localStorage.setItem("movieSearch", text);
 
-        setText('')
+        onSearch();
+
+        setText('');
     } 
 
     return (
@@ -25,8 +28,8 @@ const Search = ({onAdd}) => {
             value={text}
             onChange={(e) => setText(e.target.value)}
           ></input>
+          <h6 className="submit" onClick={onSubmit}><FaSearch /></h6>
         </div>
-        <input type='submit' value='Search Movie' className='btn btn-block'></input>
       </form>
     )
 }

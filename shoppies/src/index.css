@@ -29,7 +29,7 @@ body {
 
 .joinSection {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) ;
+  grid-template-columns: 1fr 2fr;
   place-items: center;
 }
 
@@ -39,25 +39,54 @@ body {
   place-items: center;
 }
 
-.primeSpot {
+.nomineeRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+}
+
+.nominee {
   display: grid;
   place-items: center;
+  min-width: 350px;
+}
+
+.banner {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  color: black;
+  width: 100%;
+  border: solid;
+  border-radius: 8px;
+  padding: 5px 0px;
+
 }
 
 .spot {
   display: grid;
+  min-width: 225px;
   place-items: center;
   margin: 7px;
 }
 
 .searchIcon {
+  position: relative;
   height: 200px;
-  cursor: pointer;
   transition-duration: .25s;
+  cursor:pointer;
 }
 
 .searchIcon:hover {
   height: 270px;
+}
+
+.spot .button {
+  position: relative;
+  top: 150%;
+  font-size: 50px;
+  z-index: 1;
+  cursor: pointer;
 }
 
 img {
@@ -65,7 +94,6 @@ img {
   border-width: 2px;
   border: solid;
   border-color: white;
-
 }
 
 .mainTitle {
@@ -85,7 +113,7 @@ h2 {
 }
 
 .form-control {
-  margin: 20px 0;
+  margin: 5px 0;
   display: grid;
   place-items: center;
 }
@@ -100,15 +128,17 @@ h2 {
 
 .container {
   position: relative;
+  display: grid;
+  place-items: center;
   width: 100%;
-  max-width: 250px;
+  max-width: 270px;
   transition-duration: .25s;
 }
 
 .container:hover {
   position: relative;
   width: 100%;
-  max-width: 320px;
+  max-width: 340px;
 }
 
 .container img {
@@ -116,9 +146,9 @@ h2 {
   height: auto;
 }
 
-.container .button {
+/* .container .button {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -131,10 +161,54 @@ h2 {
   border-radius: 5px;
   text-align: center;
   opacity: 90%;
+  font-size: 80px;
+} */
+
+.searchButton {
+  background-color: blue;
+  padding: 12px 30px;
+  margin-top: 0px;
 }
 
-.container .button:hover {
-  background-color: black;
-  color: white;
-  
+.add-form {
+  display: grid;
+  place-items: center;
+}
+
+.submit {
+  padding: 8px 40px 1px 40px;
+  background-color: blue;
+  cursor: pointer;
+  font-size: 32px;
+  border: solid;
+  border-radius: 8px;
+  border-color: white;
+  margin-top: 2px;
+  overflow:hidden;
+  position:relative;
+  transition-duration: .4s;
+}
+
+.submit:after {
+  content: "";
+  background: lightblue;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -40px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.submit:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+h6 {
+  margin: 0px;
 }
