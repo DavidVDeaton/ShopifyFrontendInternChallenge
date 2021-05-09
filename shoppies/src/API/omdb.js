@@ -1,7 +1,5 @@
 import axios from "axios";
 
-// const search = "office space";
-
 const movies =  {
 
     movieSearch: () => {

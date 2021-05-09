@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Search from './components/addSearch';
-import movies from "./omdb";
+import movies from "./API/omdb";
 import DisplayMovie from './components/displayMovies';
-// import Button from './components/Button';
 import Nominee from './components/Nominees';
 import Banner from './components/banner';
 
@@ -36,7 +35,6 @@ function App() {
     const random9 = Math.floor(Math.random() * 150);
 
     movies.getMovies().then((response) => {
-      console.log("get movies", response);
       setMovieList([...movieList, 
         response[random1].data.Search[0],
         response[random2].data.Search[0],
@@ -53,8 +51,6 @@ function App() {
       setYear(response[random9].data.Search[0].Year);
 
     })
-
-    console.log(movieList);
 
   }, []);
 

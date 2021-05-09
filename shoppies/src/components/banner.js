@@ -3,7 +3,7 @@ const Banner = ({showBanner}) => {
     if (showBanner === false) {
         return (
             <>
-                <h2></h2>
+                <h2 className="emptyBanner">empty banner</h2>
             </>
         )
     }
