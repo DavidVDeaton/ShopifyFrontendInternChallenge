@@ -19,7 +19,7 @@ This is a React.js application that allows the user to search The Open Movie Dat
 Please visit [https://davidvdeaton.github.io/ShopifyFrontendInternChallenge/](https://davidvdeaton.github.io/ShopifyFrontendInternChallenge/) to nominate your favorite films.
 
 # Video Demo
-![Video Demo](./shoppies/src/assets/Shoppies.gif.gif?raw=true)
+![Video Demo](./shoppies/src/assets/Shoppies.gif?raw=true)
 
 # Technology
 The following technologies have been used for this project:
